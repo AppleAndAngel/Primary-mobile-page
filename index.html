@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>移动端切图练习</title>
+    <link rel=stylesheet href="/css/common.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <script>
+        (function(doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 750) {
+                        docEl.style.fontSize = '100px';
+                    } else {
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+    <!--头部-->
+    <div class="header">
+      宣传图
+    </div>
+    <!--主体-->
+    <div class="main">
+        <ul class="tab-contain text-size-30">
+            <li class="tab">单程</li>
+            <li class="tab">往返</li>
+        </ul>
+        <div class="select-contain">
+            <div class="flex-contain">
+                <div class=padding-top-bottom-25>
+                  <div class="icon-box">
+                    <div class="icon-1">
+                      <span class="icon-center-1 width-100per height-100per display-block"></span>
+                    </div>
+                    <div class="ver-line"></div>
+                    <div class="icon-2">
+                      <span class="icon-center-2 width-100per height-100per display-block"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-size-16">
+                    <p>从哪里出发？</p>
+                    <p>到哪里去？</p>
+                </div>
+            </div>
+            <div class="date">
+              <p class="width-20per display-inline-block">
+                <svg class="icon margin-left-40" aria-hidden="true">
+                  <use xlink:href="#icon-buqian"></use>
+                </svg>
+              </p>
+              <p class="display-inline-block">
+                <span>出发日期</span>
+              </p>
+            </div>
+        </div>
+        <div class="set">
+          <p class="width-20per display-inline-block">
+            <svg class="icon margin-left-40" aria-hidden="true">
+              <use xlink:href="#icon-lunchuan"></use>
+            </svg>
+          </p>
+          <p class="display-inline-block width-73per">
+            <span>舱位</span>
+            <span class="text-size-16 float-right color-a8a6a6">请选择 &gt;</span>
+          </p>
+        </div>
+        <div class="number">
+          <p class="width-20per display-inline-block">
+            <svg class="icon margin-left-40" aria-hidden="true">
+              <use xlink:href="#icon-yonhu"></use>
+            </svg>
+          </p>
+          <p class="display-inline-block width-73per">
+            <span>人数</span>
+            <span class="text-size-16 float-right color-a8a6a6">请选择 &gt;</span>
+          </p>
+        </div>
+        <button class="btn-submit">提交询价</button>
+    </div>
+    <!--底部-->
+    <div class="footer">
+        <ul>
+            <li>
+              <p class="display-inline-block width-20per height-35 position-relative">
+                <svg class="icon text-size-30 position-absolute" aria-hidden="true" style="top:.16rem;left:-.18rem;">
+                  <use xlink:href="#icon-chepai"></use>
+                </svg>
+              </p>
+
+              <p class="display-inline-block">
+                <span>订专车</span>
+              </p>
+            </li>
+            <li>
+              <p class="display-inline-block width-20per height-35 position-relative">
+                <svg class="icon text-size-30 position-absolute" aria-hidden="true" style="top:.16rem;left:-.18rem;">
+                  <use xlink:href="#icon-jipiao"></use>
+                </svg>
+              </p>
+              <span>订机票</span>
+            </li>
+            <li>
+              <p class="display-inline-block width-20per height-35 position-relative">
+                <svg class="icon text-size-30 position-absolute" aria-hidden="true" style="top:.16rem;left:-.18rem;">
+                  <use xlink:href="#icon-renyuan"></use>
+                </svg>
+              </p>
+              <span>我的</span>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/js/font-icons/iconfont.js"></script>
+    <script>
+        $('.tab').click(function(){
+            var index = $(this).index();
+            $('.tab').css({'border-bottom':'none'});
+            $(this).css({'border-bottom':'.04rem solid #2dd4a6'});
+        })
+
+    </script>
+</body>
+</html>

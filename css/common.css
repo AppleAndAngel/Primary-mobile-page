@@ -1,0 +1,64 @@
+/* font-size */
+.text-size-16{
+  font-size:.32rem;
+}
+.text-size-20{
+  font-size:.4rem;
+}
+.text-size-30{
+  font-size:.6rem;
+}
+/* width */
+.width-20per{
+  width:20%;
+}
+.width-73per{
+  width:73%;
+}
+.width-100per{
+  width:100%;
+}
+/* height */
+.height-20{
+  height:.4rem;
+}
+.height-35{
+  height:.7rem;
+}
+.height-100per{
+  height:100%;
+}
+/* margin */
+.margin-left-40{
+  margin-left:.8rem;
+}
+/* padding */
+.padding-top-bottom-25{
+  padding-top:.5rem;
+  padding-bottom:.5rem;
+}
+/* position */
+.position-absolute{
+  position:absolute;
+}
+.position-relative{
+  position:relative;
+}
+/* color */
+.color-a8a6a6{
+  color:#a8a6a6;
+}
+/* float */
+.float-left{
+  float:left;
+}
+.float-right{
+  float:right;
+}
+/* block */
+.display-block{
+  display:block;
+}
+.display-inline-block{
+  display:inline-block;
+}
